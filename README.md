@@ -104,7 +104,7 @@
 
 MIT License，见 `LICENSE` 文件（与 Godot Asset Store 页面选择的许可证类型一致）。
 
-Copyright (c) 2026 AuAu
+Copyright (c) 2026
 
 ---
 
