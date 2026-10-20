@@ -1,8 +1,9 @@
-# SpriteFrames to AnimationPlayer
+# SpriteFrames To AnimationPlayer
 
 一个 Godot 4 编辑器插件，把 `AnimatedSprite2D` 的 `SpriteFrames` 一键转换成 `AnimationPlayer` 的动画（含 `frame` / `animation` 两条轨道），方便用 `AnimationPlayer` 统一管理、混编、过渡所有精灵动画。
 
-- 插件版本：`1.3.2`
+- 插件版本：`1.3.3`
+- 作者：AuAu
 - 标签：`2d`、`animation`、`tools`
 - 目标引擎：Godot 4（含 4.7 的 API 适配，如对 `AnimatedSprite2D.playing` 移除、`AnimationLibrary` 等的处理）
 
@@ -31,7 +32,7 @@
 
 1. 把整个 `sprite_frames_to_animation_player/` 目录放到项目的 `addons/` 下（即 `res://addons/sprite_frames_to_animation_player/`）。
 2. 在 Godot 编辑器里打开 **Project > Project Settings > Plugins**。
-3. 找到 **SpriteFrames to AnimationPlayer**，把状态切到 **Enable**。
+3. 找到 **SpriteFrames To AnimationPlayer**，把状态切到 **Enable**。
 
 > 插件为 `@tool` 编辑器插件，运行时不会加载到打包后的游戏里。
 
@@ -88,6 +89,8 @@
 | `exporter.gd` | 真正执行导出与回滚，挂在 UndoRedo 上支持整体撤销。 |
 | `node_finder.gd` | 递归收集场景内某类节点（`AnimatedSprite2D` / `AnimationPlayer`）。 |
 | `i18n.gd` | 内建中/英文案字典，跟随编辑器语言切换。 |
+| `LICENSE` | MIT 许可证全文，与商店页面选择的许可证类型一致。 |
+| `AI_USAGE.md` | AI 参与开发的说明（哪些内容由 AI 生成、人工做了什么）。 |
 
 ---
 
@@ -100,4 +103,14 @@
 
 ## 许可证
 
-随本项目使用；如需单独分发请保留 `plugin.cfg` 中的作者与版本信息。
+MIT License，见 `LICENSE` 文件（与 Godot Asset Store 页面选择的许可证类型一致）。
+
+Copyright (c) 2026 AuAu
+
+---
+
+## AI 使用说明
+
+本插件在开发过程中使用了 AI 辅助，具体说明见 `AI_USAGE.md`。
+
+简述：GDScript 源码、内建中英文案与本文档的初稿由 AI 编码助手生成，随后由作者在 Godot 4.7 编辑器中逐项人工审阅、调试、修正（含右键菜单注入、UndoRedo 快照、4.7 API 破坏性变更适配等），最终代码由作者确认并负责。插件不含 AI 生成的图片、音频等素材。
